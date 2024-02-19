@@ -1,0 +1,18 @@
+<div class="row pt-2">
+    <div class="col"  *ngFor="let card of cards;let i=index" (click)="selectCard(card,i)" >
+        <div class="card text-center mb-4 " [ngClass]="{ 'selected': card.isSelected }" >
+            <div class="card-body d-flex justify-content-center align-items-center">
+                <div>
+                    <h4 class="card-title" [ngClass]="{ 'title-selected': card.isSelected }">
+                        <i [class]="card.icon" [ngClass]="{ 'icon-selected': card.isSelected}"></i>
+                    </h4>
+                    <p  [ngClass]="{ 'name-selected': card.isSelected }" class="card-text">{{card.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center mb-3">
+    <button [ngClass]="{ 'button-selected': isSelected }" (click)="okButton()" class="button-submit mt-2 btn btn-block">تأكيد</button>
+</div>
+    

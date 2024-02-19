@@ -1,0 +1,32 @@
+<header class="header" [ngClass]="getHeaderStyles()">
+    <div class="container">
+        <div class="d-flex justify-content-between nav ">
+            <div class="pt-0  logo  text-white d-flex align-items-end justify-content-center">
+                <div class="text-center mb-2">
+                    <span>نحم</span>
+                    <br>
+                    <span>najm</span>
+                </div>
+                <!-- <img src="../../../assets/images/download 1.png" alt=""> -->
+            </div>
+            <div *ngIf="showElement" class="searchInput">
+                <input class="form-control" placeholder="ما الذي تبحث عنة؟">
+            </div>
+            <div class="d-flex align-items-center header-right">
+                <div class="notification ms-3  d-flex justify-content-center align-items-center">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="language d-flex justify-content-center align-items-center">
+                    Ar
+                </div>
+            </div>
+            <div class=" leader d-flex" *ngIf="showElement">
+                <img class="rounded-circle mt-2" src="https://c0.klipartz.com/pngpicture/858/156/gratis-png-sistema-de-reconocimiento-facial-de-seguridad-software-de-control-de-acceso-deteccion-facial-retrato-de-hombre-de-dibujos-animados.png" alt="">
+                <div class="mt-4 pt-3 me-2 leaderInfo">
+                    <h6>فهد</h6>
+                     <span>مدقق الشكاوي</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>

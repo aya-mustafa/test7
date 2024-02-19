@@ -1,0 +1,110 @@
+<div class="  container mt-4 pt-4 text-center text-white">
+   <div class="row">
+            <div class="col-md-3 mb-3 ">
+                <div class="newComplaints">
+                    <p class="mt-2">شكاوي جديدة</p>
+                    <p>150</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="acceptedComplaints">
+                    <p class="mt-2">شكاوي مرفوضه</p>
+                <p>100</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="rejectedComplaints1">
+                    <p class="mt-2">شكاوي تم اعتمادها</p>
+                    <p>120</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="rejectedComplaints">
+                    <p class="mt-2">شكاوي مرفوضه</p>
+                <p>44</p>
+                </div>
+            </div>
+   </div>
+
+   <div class=" d-flex justify-content-between text-black my-2 filteration">
+    <p>الشكاوي الجديده</p>
+    <div class="date">
+        <label class="ms-3">التاريخ</label>
+        <select name="" id="">
+            <option selected value="">الكل</option>
+            <option value="">Feb 17, 2024</option>
+            <option value="">Feb 17, 2024</option>
+            <option value="">Feb 17, 2024</option>
+            <option value="">Feb 17, 2024</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label class="ms-3">التصنيف</label>
+        <select name="" id="">
+            <option selected value="">الكل</option>
+            <option value="">الشكاوي الجديدة</option>
+            <option value="">الشكاوي المقبوله</option>
+            <option value="">الشكاوي المرفوضه</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label class="ms-3">الحالة</label>
+        <select name="" id="">
+            <option selected value="">الكل</option>
+            <option value="">الشكاوي المقبوله</option>
+            <option value="">الشكاوي المرفوضه</option>
+        </select>
+    </div>
+   </div>
+
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">رقم الشكوي</th>
+        <th scope="col">نوع الشكوي</th>
+        <th scope="col">تاريخ الشكوي</th>
+        <th scope="col">المدينه</th>
+        <th scope="col">الادارة</th>
+        <th scope="col">الحالة</th>
+        <th scope="col">عرض</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | paginate: { itemsPerPage: pageSize, currentPage: p };let i = index;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.type}}</td>
+        <td>{{item.date | date}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.leaderCity}} </td>
+        <td class="status">{{item.status}}</td>
+        <td>
+            <button type="button" class="border border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title fs-5" id="exampleModalLabel">{{item.type}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{item.date|date}}</p>
+                        <p> الشكوي مقدمه ف فرع الدقهليه من  م م ع يقول بأن هناك حادت للسياره </p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">غلق</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="text-center paginati">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

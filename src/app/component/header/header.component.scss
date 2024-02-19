@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Dancing+Script:wght@700&family=Libre+Franklin&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+.header
+{
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px  10px #cdcbcb;
+    height: 105px;
+    .header-right
+    {
+        transform: translateY(-10%);
+        .language,.notification
+        {
+            background-color: #fff;
+            border: 1px solid #E1E3E6;
+            width: 62px;
+            height: 48px;
+            border-radius: 8px;
+        }
+
+    }
+}
+input
+{
+    width:450px;
+    margin-top: 38px;
+    border-radius: 18px;
+}
+.logo
+{
+    width:90px;
+    height: 146px;
+    background-color: #12AA77;
+    span
+    {
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 20px !important;
+        font-family: "Tajawal", sans-serif;
+    }
+}
+.leader img
+{
+    width:80px;
+    height:90px;
+}
+.leader h6
+{
+    line-height:0px;
+}
+@media screen and (max-width:640px) {
+    .nav 
+    {
+        display: block;
+    }
+    .dashboard-header
+    {
+        height: 250px;
+    }
+    .leader
+    {
+        display: block !important;
+        text-align: center;
+        order: 1;
+        img
+        {
+            width:40px;
+            height:40px;
+            
+        }
+        .leaderInfo
+        {
+            margin-top: 0px !important;
+        }
+    }
+    .searchInput
+    {
+        order: 4;
+    }
+}

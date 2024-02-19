@@ -1,0 +1,78 @@
+.col-md-3>div
+{
+    border-radius: 14px;
+    padding: 5px 7px;
+}
+.newComplaints
+{
+    background-color: #FDBE7B;
+}
+.acceptedComplaints
+{
+    background-color:#12AA77;
+    
+}
+.rejectedComplaints1
+{
+    background-color: #FF6A6F
+}
+.rejectedComplaints
+{
+    background-color:#43A7D8
+}
+
+thead th
+{
+    background-color: #12AA77 !important;
+    color:#fff;
+}
+td
+{
+    padding: 15px 0px;
+}
+.status
+{
+    color:#FDBE7B
+}
+select{
+    width:150px;
+    background-color:#E7FFF3;
+}
+label
+{
+    font-size:15px;
+    color:#9c9999
+}
+.modal-footer button
+{
+    background-color: #12AA77;
+    color : #fff
+}
+.searchInput
+{
+    display: none;
+}
+
+@media screen and (max-width:640px) {
+    .filteration
+    {
+        display: block !important;
+        div
+        {
+            label
+            {
+                width:50px
+            }
+            margin-bottom: 20px;
+            select
+            {
+                width: 350px;
+            }
+        }
+    }
+    .container
+    {
+        padding-top: 120px !important;
+    }
+
+}
